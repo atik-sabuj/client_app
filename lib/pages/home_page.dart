@@ -12,25 +12,24 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
       ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-
             children: [
               Center(
                 child: ElevatedButton(
                   child: Text('My Profile'),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.green,
-                    // side: BorderSide(color: Colors.yellow, width: 5),
+                    backgroundColor: Colors.green,
+                    //side: BorderSide(color: Colors.yellow, width: 5),
                     textStyle: const TextStyle(
-                        color: Colors.white, fontSize: 25, fontStyle: FontStyle.normal),
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                        color: Colors.white, fontSize: 30, fontStyle: FontStyle.normal),
+                    shape: const BeveledRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
                   ),
                   onPressed: () {},
                 ),
@@ -40,12 +39,12 @@ class _HomePageState extends State<HomePage> {
               ElevatedButton(
                 child: Text('Daily Visit'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
+                  backgroundColor: Colors.green,
                   // side: BorderSide(color: Colors.yellow, width: 5),
                   textStyle: const TextStyle(
-                      color: Colors.white, fontSize: 25, fontStyle: FontStyle.normal),
-                  shape: BeveledRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                      color: Colors.white, fontSize: 30, fontStyle: FontStyle.normal),
+                  shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5))),
                 ),
                 onPressed: () {},
               ),
@@ -55,12 +54,12 @@ class _HomePageState extends State<HomePage> {
               ElevatedButton(
                 child: Text('Sale Request'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
+                  backgroundColor: Colors.green,
                   // side: BorderSide(color: Colors.yellow, width: 5),
                   textStyle: const TextStyle(
-                      color: Colors.white, fontSize: 25, fontStyle: FontStyle.normal),
-                  shape: BeveledRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                      color: Colors.white, fontSize: 30, fontStyle: FontStyle.normal),
+                  shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5))),
                 ),
                 onPressed: () {},
               ),
