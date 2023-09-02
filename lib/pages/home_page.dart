@@ -1,3 +1,4 @@
+import 'package:client_app/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -31,9 +32,14 @@ class _HomePageState extends State<HomePage> {
                     shape: const BeveledRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(5))),
                   ),
-                  onPressed: () {},
+
+                  onPressed: () async{
+                    Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => const ProfilePage()));
+                  },
                 ),
               ),
+
               const SizedBox(height: 10,),
 
               ElevatedButton(
