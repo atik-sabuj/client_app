@@ -29,6 +29,7 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
     ),
               TextFormField(
+                keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
                   icon: Icon(Icons.phone),
                   hintText: 'Enter Phone Number',
@@ -36,6 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               TextFormField(
+              keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
                   icon: Icon(Icons.email),
                   hintText: 'Enter Your Email',
@@ -43,6 +45,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               TextFormField(
+                keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
                   icon: Icon(Icons.man_sharp),
                   hintText: 'Enter Your NID Number',

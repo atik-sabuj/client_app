@@ -164,6 +164,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
             children: [
               Container(width: 150,
                 child: TextFormField(
+                  keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
                     hintText: 'Enter Phone Number',
                     labelText: 'Phone',
@@ -173,6 +174,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
 
               Container(width: 150,
                 child: TextFormField(
+                  keyboardType: TextInputType.emailAddress,
                   decoration: const InputDecoration(
                     hintText: 'Enter Address',
                     labelText: 'Address',
@@ -205,15 +207,14 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
           ),
           SizedBox(height: 10,),
 
-          Padding(
-            padding: const EdgeInsets.all(32.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
 
-              children: [
-                DropdownButton(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: DropdownButton(
                   // Initial Value
                   value: brandvalue,
 
@@ -235,8 +236,8 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                     });
                   },
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
