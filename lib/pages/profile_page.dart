@@ -1,3 +1,4 @@
+import 'package:client_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -13,6 +14,9 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Profile'),
+        actions: [
+
+        ],
       ),
       body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

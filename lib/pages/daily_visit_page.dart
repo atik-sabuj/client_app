@@ -10,6 +10,24 @@ class DailyVisitPage extends StatefulWidget {
 class _DailyVisitPageState extends State<DailyVisitPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Daily Visit Page'),
+      ),
+      body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.person),
+                hintText: 'Enter Your Name',
+                labelText: 'Name',
+              ),
+            ),
+
+          ]
+      ),
+
+    );
   }
 }
