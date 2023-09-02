@@ -23,7 +23,7 @@ class _ProfilePageState extends State<ProfilePage> {
             children: [
         TextFormField(
         decoration: const InputDecoration(
-            icon: Icon(Icons.person),
+          icon: Icon(Icons.person),
         hintText: 'Enter Your Name',
         labelText: 'Name',
       ),

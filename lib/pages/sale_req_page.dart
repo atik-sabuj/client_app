@@ -32,6 +32,11 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
     'Admin',
   ];
 
+  String brandvalue = 'Brand';
+  var brandtypes = [
+    'Brand',
+    'Food',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -128,26 +133,40 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
               Container(width: 150,
                 child: TextFormField(
                   decoration: const InputDecoration(
-                    icon: Icon(Icons.man_sharp),
-                    hintText: 'Enter Your NID Number',
-                    labelText: 'NID',
+                    //icon: Icon(Icons.man_sharp),
+                    hintText: '0',
+                    labelText: 'Customer BL',
                   ),
                 ),
               ),
             ],
           ),
 
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            Container(width: 250,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                hintText: 'Enter Name',
+                labelText: 'Customer Name',
+              ),
+            ),
+          ),
+            ],
+          ),
+
+
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
-
             children: [
               Container(width: 150,
                 child: TextFormField(
                   decoration: const InputDecoration(
-                    icon: Icon(Icons.man_sharp),
-                    hintText: 'Enter Your NID Number',
-                    labelText: 'NID',
+                    hintText: 'Enter Phone Number',
+                    labelText: 'Phone',
                   ),
                 ),
               ),
@@ -155,13 +174,69 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
               Container(width: 150,
                 child: TextFormField(
                   decoration: const InputDecoration(
-                    icon: Icon(Icons.man_sharp),
-                    hintText: 'Enter Your NID Number',
-                    labelText: 'NID',
+                    hintText: 'Enter Address',
+                    labelText: 'Address',
                   ),
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 10,),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                //padding: const EdgeInsets.only(left: 150.0, top: 40.0),
+                child: ElevatedButton(
+                  onPressed: (){},
+                  child: const Text('Total: 0'),
+                ),
+              ),
+
+              Container(
+                child: ElevatedButton(
+                  onPressed: (){},
+                  child: const Text('Submit'),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 10,),
+
+          Padding(
+            padding: const EdgeInsets.all(32.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+
+              children: [
+                DropdownButton(
+                  // Initial Value
+                  value: brandvalue,
+
+                  // Down Arrow Icon
+                  icon: const Icon(Icons.keyboard_arrow_down),
+
+                  // Array list of items
+                  items: brandtypes.map((String brandtypes) {
+                    return DropdownMenuItem(
+                      value: brandtypes,
+                      child: Text(brandtypes),
+                    );
+                  }).toList(),
+                  // After selecting the desired option,it will
+                  // change button value to selected value
+                  onChanged: (String? newBrandValue) {
+                    setState(() {
+                      brandvalue = newBrandValue!;
+                    });
+                  },
+                ),
+              ],
+            ),
           ),
         ],
       ),
