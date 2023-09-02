@@ -33,16 +33,16 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
               TextFormField(
                 decoration: const InputDecoration(
-                  icon: Icon(Icons.man_sharp),
-                  hintText: 'Enter Your NID Number',
-                  labelText: 'NID',
+                  icon: Icon(Icons.email),
+                  hintText: 'Enter Your Email',
+                  labelText: 'Email',
                 ),
               ),
               TextFormField(
                 decoration: const InputDecoration(
-                  icon: Icon(Icons.calendar_today),
-                  hintText: 'Enter your Date of Birth',
-                  labelText: 'Dob',
+                  icon: Icon(Icons.man_sharp),
+                  hintText: 'Enter Your NID Number',
+                  labelText: 'NID',
                 ),
               ),
               Container(
