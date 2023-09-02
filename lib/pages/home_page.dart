@@ -35,8 +35,8 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.all(Radius.circular(5))),
                   ),
 
-                  onPressed: () async{
-                    Navigator.pushReplacement(context,
+                  onPressed: () {
+                    Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const ProfilePage()));
                   },
                 ),
@@ -54,8 +54,8 @@ class _HomePageState extends State<HomePage> {
                   shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(5))),
                 ),
-                onPressed: () async{
-                  Navigator.pushReplacement(context,
+                onPressed: () {
+                  Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const DailyVisitPage()));
                 },
               ),
@@ -72,10 +72,11 @@ class _HomePageState extends State<HomePage> {
                   shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(5))),
                 ),
-                onPressed: () async{
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => const SaleRequestPage()));
-                },
+                  onPressed: () {
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const SaleRequestPage()),
+                    );
+                  }
               ),
             ],
           ),

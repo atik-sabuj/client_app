@@ -13,6 +13,12 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Daily Visit Page'),
+        leading: InkWell(
+            onTap :(){
+              Navigator.pop(context);
+              print('This is On Tap');
+            },
+            child: Icon(Icons.arrow_back)),
       ),
       body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -14,9 +14,12 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Profile'),
-        actions: [
-
-        ],
+        leading: InkWell(
+            onTap :(){
+              Navigator.pop(context);
+              print('This is On Tap');
+            },
+            child: Icon(Icons.arrow_back)),
       ),
       body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
