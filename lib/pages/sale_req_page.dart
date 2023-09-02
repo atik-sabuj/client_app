@@ -10,16 +10,21 @@ class SaleRequestPage extends StatefulWidget {
 class _SaleRequestPageState extends State<SaleRequestPage> {
 
   // Initial Selected Value
-  String dropdownvalue = 'Item 1';
-
+  String profilevalue = 'General';
   // List of items in our dropdown menu
-  var items = [
-    'Item 1',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-    'Item 5',
+  var profiletypes = [
+    'General',
+    'Special',
+    'Admin',
   ];
+
+  String branchvalue = 'Main Branch';
+  var branchtypes = [
+    'Main Branch',
+    'Sub Branch',
+    'Regional Branch',
+  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -27,30 +32,54 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
       appBar: AppBar(
         title: const Text("Sale Request Page"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             DropdownButton(
-
               // Initial Value
-              value: dropdownvalue,
+              value: profilevalue,
 
               // Down Arrow Icon
               icon: const Icon(Icons.keyboard_arrow_down),
 
               // Array list of items
-              items: items.map((String items) {
+              items: profiletypes.map((String profiletypes) {
                 return DropdownMenuItem(
-                  value: items,
-                  child: Text(items),
+                  value: profiletypes,
+                  child: Text(profiletypes),
                 );
               }).toList(),
               // After selecting the desired option,it will
               // change button value to selected value
-              onChanged: (String? newValue) {
+              onChanged: (String? newProfileValue) {
                 setState(() {
-                  dropdownvalue = newValue!;
+                  profilevalue = newProfileValue!;
+                });
+              },
+            ),
+
+            DropdownButton(
+              // Initial Value
+              value: branchvalue,
+
+              // Down Arrow Icon
+              icon: const Icon(Icons.keyboard_arrow_down),
+
+              // Array list of items
+              items: branchtypes.map((String branchtypes) {
+                return DropdownMenuItem(
+                  value: branchtypes,
+                  child: Text(branchtypes),
+                );
+              }).toList(),
+              // After selecting the desired option,it will
+              // change button value to selected value
+              onChanged: (String? newBranchValue) {
+                setState(() {
+                  branchvalue = newBranchValue!;
                 });
               },
             ),
