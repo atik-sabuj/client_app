@@ -26,65 +26,144 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
   ];
 
 
+  String customervalue = 'Customer';
+  var customertypes = [
+    'Customer',
+    'Admin',
+  ];
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Sale Request Page"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            DropdownButton(
-              // Initial Value
-              value: profilevalue,
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
 
-              // Down Arrow Icon
-              icon: const Icon(Icons.keyboard_arrow_down),
+            children: [
+              DropdownButton(
+                // Initial Value
+                value: profilevalue,
 
-              // Array list of items
-              items: profiletypes.map((String profiletypes) {
-                return DropdownMenuItem(
-                  value: profiletypes,
-                  child: Text(profiletypes),
-                );
-              }).toList(),
-              // After selecting the desired option,it will
-              // change button value to selected value
-              onChanged: (String? newProfileValue) {
-                setState(() {
-                  profilevalue = newProfileValue!;
-                });
-              },
-            ),
+                // Down Arrow Icon
+                icon: const Icon(Icons.keyboard_arrow_down),
 
-            DropdownButton(
-              // Initial Value
-              value: branchvalue,
+                // Array list of items
+                items: profiletypes.map((String profiletypes) {
+                  return DropdownMenuItem(
+                    value: profiletypes,
+                    child: Text(profiletypes),
+                  );
+                }).toList(),
+                // After selecting the desired option,it will
+                // change button value to selected value
+                onChanged: (String? newProfileValue) {
+                  setState(() {
+                    profilevalue = newProfileValue!;
+                  });
+                },
+              ),
 
-              // Down Arrow Icon
-              icon: const Icon(Icons.keyboard_arrow_down),
+              DropdownButton(
+                // Initial Value
+                value: branchvalue,
 
-              // Array list of items
-              items: branchtypes.map((String branchtypes) {
-                return DropdownMenuItem(
-                  value: branchtypes,
-                  child: Text(branchtypes),
-                );
-              }).toList(),
-              // After selecting the desired option,it will
-              // change button value to selected value
-              onChanged: (String? newBranchValue) {
-                setState(() {
-                  branchvalue = newBranchValue!;
-                });
-              },
-            ),
-          ],
-        ),
+                // Down Arrow Icon
+                icon: const Icon(Icons.keyboard_arrow_down),
+
+                // Array list of items
+                items: branchtypes.map((String branchtypes) {
+                  return DropdownMenuItem(
+                    value: branchtypes,
+                    child: Text(branchtypes),
+                  );
+                }).toList(),
+                // After selecting the desired option,it will
+                // change button value to selected value
+                onChanged: (String? newBranchValue) {
+                  setState(() {
+                    branchvalue = newBranchValue!;
+                  });
+                },
+              ),
+
+
+            ],
+          ),
+          SizedBox(height: 10,),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+
+            children: [
+              DropdownButton(
+                // Initial Value
+                value: customervalue,
+
+                // Down Arrow Icon
+                icon: const Icon(Icons.keyboard_arrow_down),
+
+                // Array list of items
+                items: customertypes.map((String customertypes) {
+                  return DropdownMenuItem(
+                    value: customertypes,
+                    child: Text(customertypes),
+                  );
+                }).toList(),
+                // After selecting the desired option,it will
+                // change button value to selected value
+                onChanged: (String? newCustomerValue) {
+                  setState(() {
+                    customervalue = newCustomerValue!;
+                  });
+                },
+              ),
+
+              Container(width: 150,
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    icon: Icon(Icons.man_sharp),
+                    hintText: 'Enter Your NID Number',
+                    labelText: 'NID',
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+
+            children: [
+              Container(width: 150,
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    icon: Icon(Icons.man_sharp),
+                    hintText: 'Enter Your NID Number',
+                    labelText: 'NID',
+                  ),
+                ),
+              ),
+
+              Container(width: 150,
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    icon: Icon(Icons.man_sharp),
+                    hintText: 'Enter Your NID Number',
+                    labelText: 'NID',
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
