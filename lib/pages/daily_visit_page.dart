@@ -22,7 +22,7 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
             child: Icon(Icons.arrow_back)),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             Row(
@@ -119,7 +119,7 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
                   width: 150,
                   child: TextFormField(
                     decoration: const InputDecoration(
-                      hintText: 'Enter Short Name',
+                      hintText: 'Enter Short',
                       labelText: 'Short Name',
                       border: OutlineInputBorder(
                           borderSide:
@@ -166,7 +166,29 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
                 Container(
                   width: 150,
                   child: TextFormField(
-                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(
+                      hintText: 'Enter Website',
+                      labelText: 'Website',
+                      border: OutlineInputBorder(
+                          borderSide:
+                          const BorderSide(color: Colors.blue, width: 1)),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(
+              height: 10,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 150,
+                  child: TextFormField(
                     decoration: const InputDecoration(
                       hintText: 'Enter Address',
                       labelText: 'Address',
@@ -176,59 +198,92 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
                     ),
                   ),
                 ),
+                Container(
+                  width: 150,
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      hintText: 'Enter Here',
+                      labelText: 'Contact Person',
+                      border: OutlineInputBorder(
+                          borderSide:
+                          const BorderSide(color: Colors.blue, width: 1)),
+                    ),
+                  ),
+                ),
               ],
             ),
+
             SizedBox(
-              height: 15,
+              height: 10,
             ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  //padding: const EdgeInsets.only(left: 150.0, top: 40.0),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Total: 0'),
+                  width: 150,
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      hintText: 'Enter Designation',
+                      labelText: 'Designation',
+                      border: OutlineInputBorder(
+                          borderSide:
+                          const BorderSide(color: Colors.blue, width: 1)),
+                    ),
                   ),
                 ),
                 Container(
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Submit'),
+                  width: 150,
+                  child: TextFormField(
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(
+                      hintText: 'Enter Number',
+                      labelText: 'Contact Number',
+                      border: OutlineInputBorder(
+                          borderSide:
+                          const BorderSide(color: Colors.blue, width: 1)),
+                    ),
                   ),
                 ),
               ],
             ),
+
             SizedBox(
               height: 10,
             ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                  child: DropdownButton(
-                    // Initial Value
-                    value: brandvalue,
+                  child: Container(
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        hintText: 'Enter Remark',
+                        labelText: 'Remark',
+                        border: OutlineInputBorder(
+                            borderSide:
+                            const BorderSide(color: Colors.blue, width: 1)),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
 
-                    // Down Arrow Icon
-                    icon: const Icon(Icons.keyboard_arrow_down),
-
-                    // Array list of items
-                    items: brandtypes.map((String brandtypes) {
-                      return DropdownMenuItem(
-                        value: brandtypes,
-                        child: Text(brandtypes),
-                      );
-                    }).toList(),
-                    // After selecting the desired option,it will
-                    // change button value to selected value
-                    onChanged: (String? newBrandValue) {
-                      setState(() {
-                        brandvalue = newBrandValue!;
-                      });
-                    },
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Submit'),
                   ),
                 ),
               ],
