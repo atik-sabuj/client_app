@@ -148,9 +148,9 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                     });
                   },
                 ),
-                Container(
-                  width: 150,
+                Container(width: 150,
                   child: TextFormField(
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                       //icon: Icon(Icons.man_sharp),
                       hintText: '0',
@@ -201,6 +201,9 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                     decoration: const InputDecoration(
                       hintText: 'Enter Address',
                       labelText: 'Address',
+                      border: OutlineInputBorder(
+                          borderSide:
+                          const BorderSide(color: Colors.blue, width: 1)),
                     ),
                   ),
                 ),
