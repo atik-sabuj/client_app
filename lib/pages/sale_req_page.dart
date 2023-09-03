@@ -170,7 +170,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 Container(
                   width: 150,
                   child: TextFormField(
-                    keyboardType: TextInputType.emailAddress,
+                    //keyboardType: TextInputType.emailAddress,
                     decoration: const InputDecoration(
                       hintText: 'Enter Address',
                       labelText: 'Address',

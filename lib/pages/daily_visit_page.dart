@@ -22,7 +22,7 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
             child: Icon(Icons.arrow_back)),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Row(
@@ -31,11 +31,11 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
               children: [
                 Container(width: 150,
                   child: TextFormField(
-                    keyboardType: TextInputType.number,
+                    //keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                       //icon: Icon(Icons.man_sharp),
-                      hintText: '0',
-                      labelText: 'Customer BL',
+                      hintText: 'Enter Name',
+                      labelText: 'Representative',
                       border: OutlineInputBorder(
                           borderSide:
                           const BorderSide(color: Colors.blue, width: 1)),
@@ -97,11 +97,43 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
                 ),
                 Container(width: 150,
                   child: TextFormField(
-                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
-                      //icon: Icon(Icons.man_sharp),
-                      hintText: '0',
-                      labelText: 'Customer BL',
+                      hintText: 'Enter Name',
+                      labelText: 'Customer Name',
+                      border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blue, width: 1)),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 150,
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      hintText: 'Enter Short Name',
+                      labelText: 'Short Name',
+                      border: OutlineInputBorder(
+                          borderSide:
+                          const BorderSide(color: Colors.blue, width: 1)),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 150,
+                  child: TextFormField(
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(
+                      hintText: 'Enter Email',
+                      labelText: 'Email',
                       border: OutlineInputBorder(
                           borderSide:
                           const BorderSide(color: Colors.blue, width: 1)),
@@ -113,17 +145,7 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
             SizedBox(
               height: 10,
             ),
-            TextFormField(
-              decoration: const InputDecoration(
-                hintText: 'Enter Name',
-                labelText: 'Customer Name',
-                border: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.blue, width: 1)),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
