@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                             height: 8,
                           ),
                           const Text(
-                            "My Profile",
+                            "Sale Request",
                             style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.black,

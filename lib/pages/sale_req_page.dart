@@ -1,3 +1,4 @@
+import 'package:client_app/models/listview_value.dart';
 import 'package:client_app/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -9,34 +10,6 @@ class SaleRequestPage extends StatefulWidget {
 }
 
 class _SaleRequestPageState extends State<SaleRequestPage> {
-  // Initial Selected Value
-  String profilevalue = 'General';
-  // List of items in our dropdown menu
-  var profiletypes = [
-    'General',
-    'Special',
-    'Admin',
-  ];
-
-  String branchvalue = 'Main Branch';
-  var branchtypes = [
-    'Main Branch',
-    'Sub Branch',
-    'Regional Branch',
-  ];
-
-  String customervalue = 'Customer';
-  var customertypes = [
-    'Customer',
-    'Admin',
-  ];
-
-  String brandvalue = 'Brand';
-  var brandtypes = [
-    'Brand',
-    'Food',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
