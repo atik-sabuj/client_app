@@ -290,7 +290,6 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   showCategoryList(), //Category List like All, Telecom Devices and Accessories and others
                 ],

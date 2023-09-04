@@ -20,7 +20,6 @@ showCategoryList() {
                 width: 100,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  // <= No more error here :)
                   color: Colors.purple.withOpacity(.4),
                 ),
                 child: Row(
