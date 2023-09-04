@@ -288,30 +288,20 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 height: 10,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    width: 150,
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        hintText: 'Device',
-                        labelText: 'Telecom Device',
-                        border: OutlineInputBorder(
-                            borderSide:
-                            const BorderSide(color: Colors.blue, width: 1)),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 150,
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        hintText: 'Accessories',
-                        labelText: 'Telecom Accessories',
-                        border: OutlineInputBorder(
-                            borderSide:
-                            const BorderSide(color: Colors.blue, width: 1)),
+                  Expanded(
+                    child: Container(
+                      width: 150,
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: 'Enter Name/Code',
+                          labelText: 'Item Name/Code',
+                          border: OutlineInputBorder(
+                              borderSide:
+                              const BorderSide(color: Colors.blue, width: 1)),
+                        ),
                       ),
                     ),
                   ),
