@@ -291,7 +291,9 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  showCategoryList(), //Category List like All, Telecom Devices and Accessories and others
+                  Expanded(
+                    child: showCategoryList(),    //Category List like All, Telecom Devices and Accessories and others
+                  ),
                 ],
               ),
 
