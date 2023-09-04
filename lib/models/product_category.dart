@@ -20,9 +20,9 @@ class Category {
 }
 
 final List<Category> categoryList = [
-  Category(name: "All",image: "images/all_item.png"),
-  Category(name: "Phone",image: "images/phone.png"),
-  Category(name: "Telecom Device",image: "images/router.png"),
+  Category(name: "All Brands",image: "images/all_item.png"),
+  Category(name: "Smart Phones",image: "images/phone.png"),
+  Category(name: "Telecom Devices",image: "images/router.png"),
   Category(name: "Telecom Accessories",image: "images/webcam.png"),
 
 ];

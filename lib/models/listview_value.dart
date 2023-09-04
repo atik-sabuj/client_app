@@ -25,5 +25,5 @@ var customertypes = [
 String brandvalue = 'Brand';
 var brandtypes = [
   'Brand',
-  'Food',
+  'Device',
 ];

@@ -17,7 +17,7 @@ showCategoryList() {
               borderRadius: BorderRadius.circular(40),
             ),
             child: Container(
-                width: 100,
+                width: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
                   color: Colors.purple.withOpacity(.4),
