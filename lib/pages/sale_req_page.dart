@@ -1,5 +1,6 @@
 import 'package:client_app/models/listview_value.dart';
 import 'package:client_app/pages/home_page.dart';
+import 'package:client_app/view_model/product_category_list.dart';
 import 'package:flutter/material.dart';
 
 class SaleRequestPage extends StatefulWidget {
@@ -281,6 +282,17 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                       ),
                     ),
                   ),
+                ],
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  showCategoryList(), //Category List like All, Telecom Devices and Accessories and others
                 ],
               ),
 
