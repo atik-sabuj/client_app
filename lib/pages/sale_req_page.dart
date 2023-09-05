@@ -321,6 +321,37 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                   ),
                 ],
               ),
+
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset("images/phone.png",height: 100,width: 100,),
+                  const Text("Realme C11 2 GB | 32 GB (Blue) ", style: TextStyle(color: Color(
+                      0xAD707070),fontSize: 18),),
+                ],
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                        const Text("TP", style: TextStyle(color: Color(
+                            0xAD707070),fontSize: 18),),
+                      SizedBox(width: 10,),
+
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),
