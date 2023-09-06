@@ -338,16 +338,36 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
               const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
+                  Column(
                     children: [
-                        const Text("TP", style: TextStyle(color: Color(
-                            0xAD707070),fontSize: 18),),
-                      SizedBox(width: 10,),
+                        Column(
+                          children: [
+                            Text("TP.0", style: TextStyle(color: Colors.white,fontSize: 18,backgroundColor: Colors.blue),),
+                          ],
+                        ),
+                      SizedBox(height: 10,),
 
+                      Column(
+                        children: [
+                          Text("MRP.10490", style: TextStyle(color: Colors.white,fontSize: 18,backgroundColor: Colors.blue),),
+                        ],
+                      ),
+
+                    ],
+                  ),
+                  SizedBox(width: 5,),
+                  Column(
+                    children: [
+                      Column(
+                        children: [
+                          Text("(PSC)", style: TextStyle(color: Color(
+                              0xAD707070),fontSize: 18),),
+                        ],
+                      ),
                     ],
                   ),
                 ],
