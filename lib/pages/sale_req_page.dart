@@ -355,23 +355,29 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                         children: [
                           Text("MRP.10490", style: TextStyle(color: Colors.white,fontSize: 18,backgroundColor: Colors.blue),),
                         ],
+
                       ),
 
                     ],
                   ),
 
+                  SizedBox(width: 5,),
                   Row(
                     children: [
                       Column(
                         children: [
-                          Text("(PSC)", style: TextStyle(color: Color(
-                              0xAD707070),fontSize: 18),),
+                          Text("(PSC)",
+                            style: TextStyle(color:
+                            Color(0xAD707070),
+                                fontSize: 18,
+                              height: 3,
+                            ),),
                         ],
                       ),
                     ],
                   ),
 
-                  SizedBox(width: 30,),
+                  SizedBox(width: 20,),
                   Column(
                     children: [
                       Text("Minimum Order 1", style: TextStyle(color: Color(
@@ -412,6 +418,22 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                       ),
                       Text("Total: Tk.10490", style: TextStyle(color: Color(
                           0xAD707070),fontSize: 18),),
+                    ],
+                  ),
+
+                  SizedBox(width: 10,),
+                  Row(
+                    children: [
+                      Column(
+                        children: [
+                          Text("Add",
+                            style: TextStyle(color:
+                            Color(0xAD707070),
+                              fontSize: 18,
+                              height: 3,
+                            ),),
+                        ],
+                      ),
                     ],
                   ),
                 ],
