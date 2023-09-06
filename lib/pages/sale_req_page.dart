@@ -346,14 +346,26 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                     children: [
                         Column(
                           children: [
-                            Text("TP.0", style: TextStyle(color: Colors.white,fontSize: 18,backgroundColor: Colors.blue),),
+                            Text("TP.0",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  backgroundColor: Colors.blue,
+                              fontWeight: FontWeight.w600,
+                              ),),
                           ],
                         ),
                       SizedBox(height: 30,),
 
                       Column(
                         children: [
-                          Text("MRP.10490", style: TextStyle(color: Colors.white,fontSize: 18,backgroundColor: Colors.blue),),
+                          Text("MRP.10490",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                backgroundColor: Colors.blue,
+                              fontWeight: FontWeight.w600,
+                            ),),
                         ],
 
                       ),
@@ -426,12 +438,16 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                     children: [
                       Column(
                         children: [
-                          Text("Add",
-                            style: TextStyle(color:
-                            Color(0xAD707070),
-                              fontSize: 18,
-                              height: 3,
-                            ),),
+                          InkWell(
+                            onTap: (){},
+                            child: Text("Add",
+                              style: TextStyle(color:
+                              Color(0xAD707070),
+                                fontSize: 18,
+                                height: 3,
+                                //backgroundColor: Colors.blue,
+                              ),),
+                          ),
                         ],
                       ),
                     ],
