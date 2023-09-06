@@ -349,7 +349,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                             Text("TP.0", style: TextStyle(color: Colors.white,fontSize: 18,backgroundColor: Colors.blue),),
                           ],
                         ),
-                      SizedBox(height: 10,),
+                      SizedBox(height: 30,),
 
                       Column(
                         children: [
@@ -359,8 +359,8 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
 
                     ],
                   ),
-                  SizedBox(width: 0,),
-                  Column(
+
+                  Row(
                     children: [
                       Column(
                         children: [
@@ -377,14 +377,36 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                       Text("Minimum Order 1", style: TextStyle(color: Color(
                           0xAD707070),fontSize: 18),),
                       Container(
-                        decoration: BoxDecoration(border: Border.all(width: 2),color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(8))),
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 1.5,color: Colors.grey),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(
+                                Radius.circular(8)
+                            )
+                        ),
                         child: Row(
                           children: [
-                            Icon(Icons.remove,size:50,),
-                            SizedBox(width: 10,),
+                            Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(8)
+                                    )),
+
+                                child: Icon(Icons.remove,size:36,color: Colors.white,)),
+
+                            SizedBox(width: 24,),
                             Text("1",style: TextStyle(color: Colors.black, fontSize: 20),),
-                            SizedBox(width: 10,),
-                            Icon(Icons.add,size:50,),
+
+                            SizedBox(width: 24,),
+                            Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.green,
+                                    borderRadius: BorderRadius.all(
+                                        Radius.circular(8)
+                                    )),
+
+                                child: Icon(Icons.add,size:36,color: Colors.white,)),
                           ],
                         ),
                       ),
