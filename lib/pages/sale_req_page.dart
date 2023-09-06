@@ -46,73 +46,42 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
           child: Column(
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    decoration: BoxDecoration(
-                      color: const Color(0xffffffff),
-                      border: Border.all(
-                        width: 1,
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      decoration: BoxDecoration(
+                        color: const Color(0xffffffff),
+                        border: Border.all(
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: DropdownButton(
-                      underline: SizedBox(),
-                      // Initial Value
-                      value: profilevalue,
+                      child: DropdownButton(
+                        underline: SizedBox(),
+                        // Initial Value
+                        value: profilevalue,
+                        
+                        // Down Arrow Icon
+                        icon: const Icon(Icons.keyboard_arrow_down,),
 
-                      // Down Arrow Icon
-                      icon: const Icon(Icons.keyboard_arrow_down),
-
-                      // Array list of items
-                      items: profiletypes.map((String profiletypes) {
-                        return DropdownMenuItem(
-                          value: profiletypes,
-                          child: Text(profiletypes),
-                        );
-                      }).toList(),
-                      // After selecting the desired option,it will
-                      // change button value to selected value
-                      onChanged: (String? newProfileValue) {
-                        setState(() {
-                          profilevalue = newProfileValue!;
-                        });
-                      },
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    decoration: BoxDecoration(
-                      color: const Color(0xffffffff),
-                      border: Border.all(
-                        width: 1,
+                        // Array list of items
+                        items: profiletypes.map((String profiletypes) {
+                          return DropdownMenuItem(
+                            value: profiletypes,
+                            child: Text(profiletypes),
+                          );
+                        }).toList(),
+                        // After selecting the desired option,it will
+                        // change button value to selected value
+                        onChanged: (String? newProfileValue) {
+                          setState(() {
+                            profilevalue = newProfileValue!;
+                          });
+                        },
                       ),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: DropdownButton(
-                      underline: SizedBox(),
-                      // Initial Value
-                      value: branchvalue,
-
-                      // Down Arrow Icon
-                      icon: const Icon(Icons.keyboard_arrow_down),
-
-                      // Array list of items
-                      items: branchtypes.map((String branchtypes) {
-                        return DropdownMenuItem(
-                          value: branchtypes,
-                          child: Text(branchtypes),
-                        );
-                      }).toList(),
-                      // After selecting the desired option,it will
-                      // change button value to selected value
-                      onChanged: (String? newBranchValue) {
-                        setState(() {
-                          branchvalue = newBranchValue!;
-                        });
-                      },
                     ),
                   ),
                 ],
@@ -121,52 +90,41 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 height: 10,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    decoration: BoxDecoration(
-                      color: const Color(0xffffffff),
-                      border: Border.all(
-                        width: 1,
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      decoration: BoxDecoration(
+                        color: const Color(0xffffffff),
+                        border: Border.all(
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: DropdownButton(
-                      underline: SizedBox(),
-                      // Initial Value
-                      value: customervalue,
+                      child: DropdownButton(
+                        underline: SizedBox(),
+                        // Initial Value
+                        value: branchvalue,
 
-                      // Down Arrow Icon
-                      icon: const Icon(Icons.keyboard_arrow_down),
+                        // Down Arrow Icon
+                        icon: const Icon(Icons.keyboard_arrow_down),
 
-                      // Array list of items
-                      items: customertypes.map((String customertypes) {
-                        return DropdownMenuItem(
-                          value: customertypes,
-                          child: Text(customertypes),
-                        );
-                      }).toList(),
-                      // After selecting the desired option,it will
-                      // change button value to selected value
-                      onChanged: (String? newCustomerValue) {
-                        setState(() {
-                          customervalue = newCustomerValue!;
-                        });
-                      },
-                    ),
-                  ),
-                  Container(width: 150,
-                    child: TextFormField(
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
-                        //icon: Icon(Icons.man_sharp),
-                        hintText: '0',
-                        labelText: 'Customer BL',
-                        border: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(color: Colors.blue, width: 1)),
+                        // Array list of items
+                        items: branchtypes.map((String branchtypes) {
+                          return DropdownMenuItem(
+                            value: branchtypes,
+                            child: Text(branchtypes),
+                          );
+                        }).toList(),
+                        // After selecting the desired option,it will
+                        // change button value to selected value
+                        onChanged: (String? newBranchValue) {
+                          setState(() {
+                            branchvalue = newBranchValue!;
+                          });
+                        },
                       ),
                     ),
                   ),
@@ -186,38 +144,28 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    width: 150,
-                    child: TextFormField(
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
-                        hintText: 'Enter Phone No',
-                        labelText: 'Phone',
-                        border: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(color: Colors.blue, width: 1)),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 150,
-                    child: TextFormField(
-                      //keyboardType: TextInputType.emailAddress,
-                      decoration: const InputDecoration(
-                        hintText: 'Enter Address',
-                        labelText: 'Address',
-                        border: OutlineInputBorder(
-                            borderSide:
-                            const BorderSide(color: Colors.blue, width: 1)),
-                      ),
-                    ),
-                  ),
-                ],
+              TextFormField(
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  hintText: 'Enter Phone',
+                  labelText: 'Phone',
+                  border: OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.blue, width: 1)),
+                ),
               ),
+
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'Enter Address',
+                  labelText: 'Adress',
+                  border: OutlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.blue, width: 1)),
+                ),
+              ),
+
               SizedBox(
                 height: 15,
               ),
@@ -389,7 +337,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                     ],
                   ),
 
-                  SizedBox(width: 20,),
+                  SizedBox(width: 10,),
                   Column(
                     children: [
                       Text("Minimum Order 1", style: TextStyle(color: Color(
@@ -433,22 +381,19 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                     ],
                   ),
 
-                  SizedBox(width: 10,),
+                  SizedBox(width: 1,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: (){},
-                            child: Text("Add",
-                              style: TextStyle(color:
-                              Color(0xAD707070),
-                                fontSize: 18,
-                                height: 3,
-                                //backgroundColor: Colors.blue,
-                              ),),
-                          ),
-                        ],
+                      ElevatedButton(
+                        onPressed: (){},
+                        child: Text("Add",
+                          style: TextStyle(color:
+                          Colors.white,
+                            fontSize: 18,
+                            height: 0,
+                            //backgroundColor: Colors.blue,
+                          ),),
                       ),
                     ],
                   ),
