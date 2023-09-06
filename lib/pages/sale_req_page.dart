@@ -338,7 +338,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
               const SizedBox(
                 height: 10,
               ),
-              const Row(
+               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -359,7 +359,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
 
                     ],
                   ),
-                  SizedBox(width: 5,),
+                  SizedBox(width: 0,),
                   Column(
                     children: [
                       Column(
@@ -368,6 +368,28 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                               0xAD707070),fontSize: 18),),
                         ],
                       ),
+                    ],
+                  ),
+
+                  SizedBox(width: 30,),
+                  Column(
+                    children: [
+                      Text("Minimum Order 1", style: TextStyle(color: Color(
+                          0xAD707070),fontSize: 18),),
+                      Container(
+                        decoration: BoxDecoration(border: Border.all(width: 2),color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(8))),
+                        child: Row(
+                          children: [
+                            Icon(Icons.remove,size:50,),
+                            SizedBox(width: 10,),
+                            Text("1",style: TextStyle(color: Colors.black, fontSize: 20),),
+                            SizedBox(width: 10,),
+                            Icon(Icons.add,size:50,),
+                          ],
+                        ),
+                      ),
+                      Text("Total: Tk.10490", style: TextStyle(color: Color(
+                          0xAD707070),fontSize: 18),),
                     ],
                   ),
                 ],
