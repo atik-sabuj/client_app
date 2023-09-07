@@ -38,20 +38,10 @@ class _ProfilePageState extends State<ProfilePage> {
                 getImages();
               },
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 18.0),
-              child: Text(
-                "GFG",
-                textScaleFactor: 3,
-                style: TextStyle(color: Colors.green),
-              ),
-            ),
             Expanded(
               child: SizedBox(
-                width: 300.0,
-                child: selectedImages.isEmpty
-                    ? const Center(child: Text('Sorry nothing selected!!'))
-                    : GridView.builder(
+                width: 800.0,
+                child: GridView.builder(
                   itemCount: selectedImages.length,
                   gridDelegate:
                   const SliverGridDelegateWithFixedCrossAxisCount(
@@ -65,15 +55,62 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
             ),
+            Column(
+
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TextFormField(
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.person),
+                      hintText: 'Enter Your Name',
+                      labelText: 'Name',
+                    ),
+                  ),
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.phone),
+                      hintText: 'Enter Phone Number',
+                      labelText: 'Phone',
+                    ),
+                  ),
+                  TextFormField(
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.email),
+                      hintText: 'Enter Your Email',
+                      labelText: 'Email',
+                    ),
+                  ),
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.man_sharp),
+                      hintText: 'Enter Your NID Number',
+                      labelText: 'NID',
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(left: 150.0, top: 40.0),
+                    child: ElevatedButton(
+                      onPressed: (){},
+                      child: const Text('Submit'),
+                    ),
+                  ),
+                ]
+            ),
           ],
         ),
       ),
     );
   }
 
+
+
+
   Future getImages() async {
     final pickedFile = await picker.pickMultiImage(
-        imageQuality: 100, maxHeight: 1000, maxWidth: 1000);
+        imageQuality: 100, maxHeight: 2000, maxWidth: 2000,);
     List<XFile> xfilePick = pickedFile;
 
     setState(
@@ -82,10 +119,11 @@ class _ProfilePageState extends State<ProfilePage> {
           for (var i = 0; i < 1; i++) {
             selectedImages.add(File(xfilePick[i].path));
           }
-        } else {
+        }
+/*        else {
           ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(content: Text('Nothing is selected')));
-        }
+        }*/
       },
     );
   }
