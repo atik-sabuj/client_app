@@ -138,7 +138,8 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                   hintText: 'Enter Name',
                   labelText: 'Customer Name',
                   border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.blue, width: 1)),
+                      borderSide: const BorderSide(color: Colors.blue, width: 1),),
+
                 ),
               ),
               SizedBox(
@@ -160,7 +161,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
               TextFormField(
                 decoration: const InputDecoration(
                   hintText: 'Enter Address',
-                  labelText: 'Adress',
+                  labelText: 'Address',
                   border: OutlineInputBorder(
                       borderSide: const BorderSide(color: Colors.blue, width: 1)),
                 ),
@@ -324,16 +325,12 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                   SizedBox(width: 5,),
                   Row(
                     children: [
-                      Column(
-                        children: [
-                          Text("(PSC)",
-                            style: TextStyle(color:
-                            Color(0xAD707070),
-                                fontSize: 18,
-                              height: 3,
-                            ),),
-                        ],
-                      ),
+                      Text("(PSC)",
+                        style: TextStyle(color:
+                        Color(0xAD707070),
+                            fontSize: 18,
+                          height: 3,
+                        ),),
                     ],
                   ),
 
@@ -383,17 +380,17 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
 
                   SizedBox(width: 1,),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ElevatedButton(
-                        onPressed: (){},
-                        child: Text("Add",
-                          style: TextStyle(color:
-                          Colors.white,
-                            fontSize: 18,
-                            height: 0,
-                            //backgroundColor: Colors.blue,
-                          ),),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 16.0),
+                        child: ElevatedButton(
+                          onPressed: (){},
+                          child: Text("Add",
+                            style: TextStyle(color:
+                            Colors.white,
+                              fontSize: 18,
+                            ),),
+                        ),
                       ),
                     ],
                   ),
