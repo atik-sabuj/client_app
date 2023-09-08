@@ -50,7 +50,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Container(
+                    child: Container(height: 42,
                       padding: EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
                         color: const Color(0xffffffff),
@@ -94,7 +94,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Container(
+                    child: Container(height: 42,
                       padding: EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
                         color: const Color(0xffffffff),
@@ -133,37 +133,43 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
               SizedBox(
                 height: 10,
               ),
-              TextFormField(
-                decoration: const InputDecoration(
-                  hintText: 'Enter Name',
-                  labelText: 'Customer Name',
-                  border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.blue, width: 1),),
+              Container(height: 42,
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    hintText: 'Enter Name',
+                    labelText: 'Customer Name',
+                    border: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.blue, width: 1),),
 
+                  ),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-              TextFormField(
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  hintText: 'Enter Phone',
-                  labelText: 'Phone',
-                  border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.blue, width: 1)),
+              Container(height: 42,
+                child: TextFormField(
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    hintText: 'Enter Phone',
+                    labelText: 'Phone',
+                    border: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.blue, width: 1)),
+                  ),
                 ),
               ),
 
               SizedBox(
                 height: 10,
               ),
-              TextFormField(
-                decoration: const InputDecoration(
-                  hintText: 'Enter Address',
-                  labelText: 'Address',
-                  border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.blue, width: 1)),
+              Container(height: 42,
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    hintText: 'Enter Address',
+                    labelText: 'Address',
+                    border: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.blue, width: 1)),
+                  ),
                 ),
               ),
 
@@ -174,14 +180,14 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
+                  Container(height: 42,
                     //padding: const EdgeInsets.only(left: 150.0, top: 40.0),
                     child: ElevatedButton(
                       onPressed: () {},
                       child: const Text('Total: 0'),
                     ),
                   ),
-                  Container(
+                  Container(height: 42,
                     child: ElevatedButton(
                       onPressed: () {},
                       child: const Text('Submit'),
@@ -197,7 +203,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Container(
+                    child: Container(height: 42,
                       padding: EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
                         color: const Color(0xffffffff),
@@ -256,7 +262,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 children: [
                   Expanded(
                     child: Container(
-                      width: 150,
+                      height: 42,
                       child: TextFormField(
                         decoration: const InputDecoration(
                           hintText: 'Enter Name/Code',

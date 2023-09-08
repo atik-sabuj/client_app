@@ -18,8 +18,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Home Page'),
       ),
         body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 110.0),
+          child: Center(
             child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
