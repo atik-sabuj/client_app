@@ -99,10 +99,11 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     Container(height: 42,
                       child: TextFormField(
+                        keyboardType: TextInputType.emailAddress,
                         decoration: const InputDecoration(
                           icon: Icon(Icons.email),
-                          hintText: 'Enter Address',
-                          labelText: 'Address',
+                          hintText: 'Enter Email',
+                          labelText: 'Email',
                           border: OutlineInputBorder(
                               borderSide: const BorderSide(color: Colors.blue, width: 1)),
                         ),
