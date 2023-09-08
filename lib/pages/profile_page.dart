@@ -18,90 +18,129 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     // display image selected from gallery
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: const Text('Profile Page'),
         backgroundColor: Colors.green,
         actions: const [],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            selectedImages.isEmpty
-                ?       InkWell(
-              onTap: (){
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              selectedImages.isEmpty
+                  ? InkWell(
+                onTap: (){
+                  getImages();
+                },
+                    child: ClipOval(
+                child: SizedBox.fromSize(
+                    size: Size.fromRadius(60), // Image radius
+                    child: Image.asset("images/avatar.png",fit:BoxFit.cover,),
+                ),
+              ),
+                  )
+                  :
+              /*CircleAvatar(
+                radius: 82, // Image radius
+                foregroundImage: FileImage(selectedImages[0]),
+              ),*/
+
+              InkWell(
+                onTap: (){
                 getImages();
               },
-                  child: ClipOval(
-              child: SizedBox.fromSize(
-                  size: Size.fromRadius(60), // Image radius
-                  child: Image.asset("images/avatar.png",fit:BoxFit.cover,),
+                child: ClipOval(
+                  child: SizedBox.fromSize(
+                    size: Size.fromRadius(60), // Image radius
+                    child: Image.file(selectedImages[0],fit:BoxFit.cover,),
+                  ),
+                ),
               ),
-            ),
-                )
-                :
-            /*CircleAvatar(
-              radius: 82, // Image radius
-              foregroundImage: FileImage(selectedImages[0]),
-            ),*/
 
-            InkWell(
-              onTap: (){
-              getImages();
-            },
-              child: ClipOval(
-                child: SizedBox.fromSize(
-                  size: Size.fromRadius(60), // Image radius
-                  child: Image.file(selectedImages[0],fit:BoxFit.cover,),
-                ),
-              ),
-            ),
+              Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(height: 42,
+                      child: TextFormField(
+                        //keyboardType: TextInputType.number,
+                        decoration: const InputDecoration(
+                          icon: Icon(Icons.person),
+                          hintText: 'Enter Name',
+                          labelText: 'Name',
+                          border: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.blue, width: 1),),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(height: 42,
+                      child: TextFormField(
+                        keyboardType: TextInputType.number,
+                        decoration: const InputDecoration(
+                          icon: Icon(Icons.phone),
+                          hintText: 'Enter Phone',
+                          labelText: 'Phone',
+                          border: OutlineInputBorder(
+                              borderSide: const BorderSide(color: Colors.blue, width: 1)),
+                        ),
+                      ),
+                    ),
 
-            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              TextFormField(
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.person),
-                  hintText: 'Enter Your Name',
-                  labelText: 'Name',
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(height: 42,
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          icon: Icon(Icons.email),
+                          hintText: 'Enter Address',
+                          labelText: 'Address',
+                          border: OutlineInputBorder(
+                              borderSide: const BorderSide(color: Colors.blue, width: 1)),
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(
+                      height: 10,
+                    ),
+                Container(height: 42,
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      icon: Icon(Icons.man_sharp),
+                      hintText: 'Enter NID Number',
+                      labelText: 'NID',
+                      border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blue, width: 1)),
+                    ),
+                  ),
                 ),
-              ),
-              TextFormField(
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.phone),
-                  hintText: 'Enter Phone Number',
-                  labelText: 'Phone',
+
+                Container(
+                  padding: const EdgeInsets.only(left: 150.0, top: 40.0),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Submit'),
+                  ),
                 ),
-              ),
-              TextFormField(
-                keyboardType: TextInputType.emailAddress,
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.email),
-                  hintText: 'Enter Your Email',
-                  labelText: 'Email',
-                ),
-              ),
-              TextFormField(
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.man_sharp),
-                  hintText: 'Enter Your NID Number',
-                  labelText: 'NID',
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.only(left: 150.0, top: 40.0),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('Submit'),
-                ),
-              ),
-            ]),
-          ],
+              ]),
+            ],
+          ),
         ),
       ),
     );
   }
+
+
 
   Future getImages() async {
     final pickedFile = await picker.pickMultiImage(
