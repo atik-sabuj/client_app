@@ -286,8 +286,10 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.asset("images/phone.png",height: 60,width: 50,),
-                  const Text("Realme C11 2 GB | 32 GB (Blue) ", style: TextStyle(color: Color(
-                      0xAD707070),fontSize: 18),),
+                  const Text("Realme C11 2 GB | 32 GB (Blue) ",
+                    style: TextStyle(
+                        color: Color(0xAD707070),
+                        fontSize: 18),),
                 ],
               ),
 
@@ -363,7 +365,10 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                                         Radius.circular(8)
                                     )),
 
-                                child: Icon(Icons.remove,size:36,color: Colors.white,)),
+                                child: InkWell(onTap: (){
+                                  print('This is Remove On Tap');
+                                },
+                                    child: Icon(Icons.remove,size:36,color: Colors.white,))),
 
                             SizedBox(width: 24,),
                             Text("1",style: TextStyle(color: Colors.black, fontSize: 20),),
@@ -376,7 +381,10 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                                         Radius.circular(8)
                                     )),
 
-                                child: Icon(Icons.add,size:36,color: Colors.white,)),
+                                child: InkWell(onTap: (){
+                                  print('This is Add On Tap');
+                                },
+                                    child: Icon(Icons.add,size:36,color: Colors.white,))),
                           ],
                         ),
                       ),

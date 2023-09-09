@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                   const Text("Muskan Digital",
                     style: TextStyle(
                       color: Colors.blue,
-                      fontSize: 25,
+                      fontSize: 18,
                       //backgroundColor: Colors.blue,
                       fontWeight: FontWeight.w900,),),
                 ],
