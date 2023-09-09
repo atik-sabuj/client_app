@@ -15,6 +15,7 @@ class _DailyVisitPageState extends State<DailyVisitPage> {
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: const Text('Daily Visit Page'),
+        backgroundColor: Colors.teal,
         leading: InkWell(
             onTap :(){
               Navigator.pop(context);

@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -21,7 +20,7 @@ class _ProfilePageState extends State<ProfilePage> {
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: const Text('Profile Page'),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.teal,
         actions: const [],
       ),
       body: SingleChildScrollView(

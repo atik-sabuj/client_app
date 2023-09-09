@@ -17,6 +17,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: const Text("Sale Request Page"),
+        backgroundColor: Colors.teal,
         leading: InkWell(
             onTap :(){
               Navigator.pop(context);
@@ -284,7 +285,7 @@ class _SaleRequestPageState extends State<SaleRequestPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset("images/phone.png",height: 100,width: 100,),
+                  Image.asset("images/phone.png",height: 60,width: 50,),
                   const Text("Realme C11 2 GB | 32 GB (Blue) ", style: TextStyle(color: Color(
                       0xAD707070),fontSize: 18),),
                 ],
